@@ -25,8 +25,7 @@
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{appendix}
 \usepackage{setspace}
-
-
+\usepackage{infoBulle}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %		Colors
@@ -180,7 +179,7 @@
 
 
 
-\newcommand{\myTitle}{\inColor{\fontsize{1.3cm}{1em}\selectfont Your title}}
+\newcommand{\myTitle}{\inColor{\fontsize{1.3cm}{1em}\selectfont Titre du document}}
 
 
 
@@ -196,14 +195,14 @@
 	\begin{center}
 		\begin{minipage}{\widthof{\myTitle}}
 			{\fontsize{.6cm}{1em}\selectfont\color{mainColor}
-				Subtitle
+				Sous-titre
 			}
 			\begin{spacing}{3}
 				\myTitle
 			\end{spacing}
 			\vspace*{-10mm}
 			\begin{flushright}
-				By author, date
+				By Nicolas OGIER, \today
 			\end{flushright}
 		\end{minipage}
 	\end{center}
@@ -215,5 +214,18 @@
 		\tableofcontents
 	}
 	
+	\section{section 1}
+	\subsection{sectoin 1.1}
+	\subsubsection{section 1.1.1}
+	\infoInfo{information}{ceci est une information de la plus haute importance !}
+	\warningInfo{information}{ceci est une information de la plus haute importance !}
+	\criticalInfo{information}{ceci est une information de la plus haute importance !}
+	\questionInfo{information}{ceci est une information de la plus haute importance !}
+	\checkInfo{information}{ceci est une information de la plus haute importance !}
+	
+\section{section 1}
+	\subsection{sectoin 1.1}
+	\subsubsection{section 1.1.1}
+		
 
 \end{document}
