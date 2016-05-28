@@ -15,7 +15,7 @@
 	prefix=yInvoice@
 }
 % Default currency option is "franc suisse"
-\DeclareStringOption[swissFranc]{currency}[swissFranc]
+\DeclareStringOption[euro]{currency}[euro]
 \ProcessKeyvalOptions*
 
 \RequirePackage{eurosym}
@@ -36,7 +36,7 @@
 \RequirePackage[no-math]{fontspec}
 
 \RequirePackage{polyglossia}
-\setdefaultlanguage{english}
+\setdefaultlanguage{french}
 
 \typeout{For commercial use of this Work or a Derived or Compiled Work (as defined in the LPPL v1.3c), contact me before at thib1235[at]gmail.com}
 
@@ -100,7 +100,7 @@ BoldItalicFont=Fira Sans SemiBold Italic
 % Font for section, subsection, subsubsection, etc
 \newfontfamily{\josefin}{Josefin Sans}
 \newfontfamily{\abril}{Abril Fatface}
-\newfontfamily{\FA}{fontawesome-webfont.ttf}
+\newfontfamily{\FA}{FontAwesome Regular}
 
 
 
@@ -200,7 +200,7 @@ BoldItalicFont=Fira Sans SemiBold Italic
 \newcommand{\printTitle}{
 	\vspace*{1cm}
 	\begingroup
-		\fontsize{1cm}{1.2cm}\selectfont\inColor{\yInvoice@businessName}\hfill\textsc{Invoice \#\yInvoice@invoiceNumber}\\
+		\fontsize{1cm}{1.2cm}\selectfont\inColor{\yInvoice@businessName}\hfill\textsc{Facture \#\yInvoice@invoiceNumber}\\
 	\endgroup
 	\null\hfill\inMiddleGrey{\today}
 	
@@ -267,14 +267,14 @@ BoldItalicFont=Fira Sans SemiBold Italic
 		\parbox[t]{.5\textwidth}{
 			\mbox{}\\
 			\begin{tabular}{rl}
-				\arrowtarget\inColor{Payable to} & \yInvoice@yourName\\
+				\arrowtarget\inColor{Payable à} & \yInvoice@yourName\\
 				& \yInvoice@yourAdressLineOne\\
 				& \yInvoice@yourAdressLineTwo\\
 				\ifdefempty{\yInvoice@yourAdressLineThree}{}{& \yInvoice@yourAdressLineThree\\}
 				\ifdefempty{\yInvoice@yourPhone}{}{\inLightGrey{\faMobile} & \yInvoice@yourPhone\\}
 				\ifdefempty{\yInvoice@yourMail}{}{\inLightGrey{\faEnvelopeO} & \yInvoice@yourMail\\}
 				\\
-				\inColor{Bank account} & \yInvoice@bankAdresse\\
+				\inColor{Compte bancaire} & \yInvoice@bankAdresse\\
 				\textsc{\inLightGrey{iban}}& \yInvoice@bankIban
 			\end{tabular}
 		}\parbox[t]{.5\textwidth}{
@@ -285,7 +285,7 @@ BoldItalicFont=Fira Sans SemiBold Italic
 				 & \yInvoice@clientAdressLineTwo\\
 				 \ifdefempty{\yInvoice@clientAdressLineThree}{}{& \yInvoice@clientAdressLineThree\\}
 				\\
-				\inColor{Project} & \yInvoice@project\\
+				\inColor{Projet} & \yInvoice@project\\
 				\ifdefempty{\yInvoice@contact}{}{\\
 					\inColor{Contact} & \yInvoice@contact\\
 					\ifdefempty{\yInvoice@contactPhone}{}{\inLightGrey{\faMobile} & \yInvoice@contactPhone\\}
@@ -386,11 +386,11 @@ BoldItalicFont=Fira Sans SemiBold Italic
 	\begin{tabu} to \linewidth {lllXllll}
 		\rowfont{\bfseries\sffamily\leavevmode\color{white}}
 		\rowcolor{mainColor}
-		& Short name & Date & Description & Hours & Rate & Amount & \\
+		& Référence & Date & Description & Heure & Taux & Montant & \\
 \BODY
 		\summaryline{Total}{#1}
-		\summaryline{Paid}{#2}
-		\summaryline{Balance Due}{\yInvoice@balancePrice}
+		\summaryline{Payé}{#2}
+		\summaryline{Reste à régler}{\yInvoice@balancePrice}
 	\end{tabu}
 }
 
