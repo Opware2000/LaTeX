@@ -217,10 +217,10 @@ BoldItalicFont=Fira Sans Medium Italic
 \newfontfamily{\titleFont}{CanterLight}
 \newfontfamily{\headingFontTest}{Fira Sans Book}
 \newcommand{\headingFont}{\headingFontTest}
-\newfontfamily{\chapterNumberFont}{Canter Bold 3D}%{London}%{DiamondsThinItalic}%Abril Fatface}
+\newfontfamily{\chapterNumberFont}{CanterBold}%{London}%{DiamondsThinItalic}%Abril Fatface}
 \newfontfamily{\chapterFont}{CanterBold}
 \newfontfamily{\serifFont}{Vollkorn}
-\newfontfamily{\sectionNumbers}{Oswald MediumItalic}
+\newfontfamily{\sectionNumbers}{Oswald Medium}
 \newfontfamily{\abril}{Abril Fatface}
 
 \usepackage{fontawesome}
