@@ -230,7 +230,7 @@ BoldItalicFont=Fira Sans Medium Italic
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %		Colors
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{mainColor}{RGB}{211, 47, 47}
+\definecolor{mainColor}{RGB}{47, 129, 211}
 \colorlet{lightMainColor}{mainColor!80}
 \newcommand{\lightMainColor}{\colorlet{lightMainColor}{mainColor!80}\color{lightMainColor}}
 \definecolor{secondColor}{RGB}{255, 193, 7}
