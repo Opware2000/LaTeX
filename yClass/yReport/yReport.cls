@@ -121,9 +121,11 @@
 \RequirePackage{zref-abspos}
 \RequirePackage{titletoc}
 \RequirePackage{mdframed}
-
-
-
+\RequirePackage{siunitx}
+\RequirePackage{hyperref}
+\RequirePackage[acronym,xindy,toc]{glossaries}
+\RequirePackage[xindy]{imakeidx}
+\RequirePackage[version=3]{mhchem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %		Layout
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
