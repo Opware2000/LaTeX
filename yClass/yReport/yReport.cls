@@ -214,11 +214,11 @@ BoldItalicFont=Fira Sans Medium Italic
 \newfontfamily{\normalFont}{Fira Sans Light}
 \newfontfamily{\lightBoldFont}{Fira Sans}
 \newfontfamily{\heavyFont}{Fira Sans Heavy}
-\newfontfamily{\titleFont}{CanterLight}
+\newfontfamily{\titleFont}{FiraSans-Light}
 \newfontfamily{\headingFontTest}{Fira Sans Book}
 \newcommand{\headingFont}{\headingFontTest}
-\newfontfamily{\chapterNumberFont}{CanterBold}%{London}%{DiamondsThinItalic}%Abril Fatface}
-\newfontfamily{\chapterFont}{CanterBold}
+\newfontfamily{\chapterNumberFont}{FiraSans-Light}%{London}%{DiamondsThinItalic}%Abril Fatface}
+\newfontfamily{\chapterFont}{FiraSans-Light}
 \newfontfamily{\serifFont}{Vollkorn}
 \newfontfamily{\sectionNumbers}{Oswald Medium}
 \newfontfamily{\abril}{Abril Fatface}
@@ -320,7 +320,7 @@ BoldItalicFont=Fira Sans Medium Italic
 		\begin{tikzpicture}[remember picture, overlay]
 		\coordinate[xshift=-\bigVerticalLineWidth/2, yshift=-5.8cm] (numberCenter) at (current page.north east);
 		\draw[White] (numberCenter) node{
-			\chapterNumberFont\fontsize{6.5cm}{7.8cm}\selectfont
+			\chapterNumberFont\fontsize{5.5cm}{6.8cm}\selectfont
 			\color{White}
 			\thechapter
 		};
@@ -329,7 +329,7 @@ BoldItalicFont=Fira Sans Medium Italic
 	\begin{tikzpicture}[remember picture, overlay]
 	\coordinate[xshift=\bigVerticalLineWidth/2, yshift=-5.8cm] (numberCenter) at (current page.north west);
 	\draw[White] (numberCenter) node{
-		\chapterNumberFont\fontsize{6.5cm}{7.8cm}\selectfont
+		\chapterNumberFont\fontsize{5.5cm}{5.8cm}\selectfont
 		\color{White}
 		\thechapter
 	};
@@ -345,7 +345,7 @@ BoldItalicFont=Fira Sans Medium Italic
 		\begin{FlushLeft}
 		\vspace*{-10mm}
 	}
-	\fontsize{2.5cm}{3cm}\chapterFont\selectfont%
+	\fontsize{1.5cm}{2cm}\chapterFont\selectfont%
 }[ % code after
 \alignLeftOrRightEnd
 ]
@@ -355,7 +355,7 @@ BoldItalicFont=Fira Sans Medium Italic
 {0pt} % sep
 { % code before
 	\alignLeftOrRight
-	\fontsize{2.5cm}{3cm}\chapterFont\selectfont	
+	\fontsize{1.5cm}{2cm}\chapterFont\selectfont	
 }[ % code after
 \alignLeftOrRightEnd
 ]
@@ -616,8 +616,8 @@ BoldItalicFont=Fira Sans Medium Italic
 		\fill[mainColor] (current page.north west) rectangle (rectangleEnd) node[fitting node] (headerRectangle) {};
 		
 		% title page text (title rule and subtitle)
-			% title
-		\draw (\leftmargin, -3.5cm) node[align=left, inner sep=0mm, anchor=south west, font=\fontsize{2.3cm}{1.8cm}\selectfont\chapterFont] (title) {
+			% title TAILLE DU TITRE DE LA PAGE DE COUVERTURE
+		\draw (\leftmargin, -3.5cm) node[align=left, inner sep=0mm, anchor=south west, font=\fontsize{2.0cm}{1.5cm}\selectfont\chapterFont] (title) {
 			\hspace*{-.8mm}\begin{varwidth}{\textwidth}%
 				\FlushLeft%
 				\noHyphen\runtitle%
