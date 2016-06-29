@@ -67,7 +67,7 @@
 \ifArticle
 \LoadClass[a4paper, 10pt, fleqn, openany, twoside]{article}
 \else
-\LoadClass[a4paper, 10pt, fleqn, openany, twoside]{report}
+\LoadClass[a4paper, 10pt, fleqn, openright, twoside]{report}
 \fi
 
 \RequirePackage{ifxetex}
@@ -143,10 +143,10 @@
 	a4paper,
 %	showframe,
 	twoside,
-	top=27mm,
-	bottom=27mm,
-	inner=20mm,
-	outer=20mm,
+	top=17mm,
+	bottom=17mm,
+	inner=10mm,
+	outer=10mm,
 	ignorehead,
 	ignorefoot,
 	includemp,
